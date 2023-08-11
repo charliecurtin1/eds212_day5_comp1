@@ -2,7 +2,7 @@
 title: "eds212_day5_comp1"
 format: 
   html: 
-    code-fold: true
+    code-fold: true # puts code into a dropdown
     code-summary: "show me the code"
 editor: visual
 execute: 
@@ -12,4 +12,32 @@ execute:
 
 ```{r}
 library(tidyverse)
+```
+
+Explore starwars dataset- first 6 lines, dimensions, histogram of heights, scatterplot of height vs. weight
+
+```{r}
+head(starwars)
+
+dim(starwars)
+
+names(starwars)
+```
+
+```{r}
+ggplot(data = starwars, 
+       aes(x = height)) +
+  geom_histogram(color = "purple", fill = "orange") +
+  theme_dark()
+```
+
+```{r}
+ggplot(data = starwars,
+       aes(x = height,
+           y = mass)) +
+  geom_point(color = "orange") +
+  theme_dark() + # theme
+  labs(x = "height in cm",
+      y = "mass in kg",
+      title = "height vs mass of starwars characters") # labels
 ```
