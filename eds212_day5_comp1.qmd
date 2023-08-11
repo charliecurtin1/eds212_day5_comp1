@@ -62,3 +62,9 @@ find and store sd
 ```{r}
 sd_height <- sd(starwars$height, na.rm = TRUE)
 ```
+
+## In-line reporting using code outputs
+
+-   good for reproducibility
+
+the mean height of star wars character is `r mean_height` cm with a standard deviation of `r sd_height` cm
