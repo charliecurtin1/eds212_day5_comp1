@@ -41,3 +41,24 @@ ggplot(data = starwars,
       y = "mass in kg",
       title = "height vs mass of starwars characters") # labels
 ```
+
+```{r}
+starwars$height # pull out the vector of all the values for height
+
+class(starwars$height) # check the class for the values in height
+```
+
+calculate summary statistics
+
+use mean() to find means and sd() to find standard deviations
+
+```{r}
+# na.rm removes NA values
+mean_height <- mean(starwars$height, na.rm = TRUE)
+```
+
+find and store sd
+
+```{r}
+sd_height <- sd(starwars$height, na.rm = TRUE)
+```
